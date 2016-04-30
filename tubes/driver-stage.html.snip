@@ -1,11 +1,358 @@
 <!DOCTYPE html>
-<h2>Driver stage</h2>
-<p>
-This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text 
-</p>
-<p>
-This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text 
-</p>
-<p>
-This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text This is the driver stage placeholder text 
-</p>
+<div class="WordSection1">
+<h1><a name="_Toc448603854"></a><a name="_Ref448564670">6:    
+Driver stage</a></h1>
+<p>Necessary details to properly design a driver stage were all
+already discussed. Here we need just to make some considerations
+and calculations. As illustrated in Figure 23, the driver stage is
+basically a voltage amplifier, which was already discussed in
+Section 2.3. A resistive load <i>R<sub>a</sub></i> is connected to
+the anode of the vacuum tube and the output voltage is taken at the
+anode itself. The easiest way to set the grid bias is to use the
+cathode bias technique, by choosing an appropriate cathode resistor
+<i>R<sub>k</sub></i> to the vacuum tube cathode. The cathode
+resistor is also generally bypassed by a capacitor
+<i>C<sub>k</sub></i> to reduce the local negative feedback produced
+by the cathode resistor and to increase gain. Cathode biasing and
+local negative feedback details were already discussed in Section
+2.7.2. The grid stopper resistor <i>R<sub>g</sub></i> is used to
+block very high frequencies that can enter the circuit and
+parasitic oscillations, by forming a low pass filter with the
+internal vacuum tube capacitance. As we already said, values around
+47k ohm are used, for instance, with 12AX7 vacuum tubes. The
+potentiometer <i>R<sub>v</sub></i> is used to control the amount of
+input signal applied to the grid. The potentiometer also acts as a
+grid leak resistor and forms, with the coupling capacitor
+<i>C<sub>c</sub></i>, an high pass filter that blocks the unwanted
+low frequencies. The coupling capacitor <i>C<sub>c</sub></i> also
+isolates the driver stage from possible DC coming from the external
+source. The use of a grid stopper resistor is particularly
+important here. We are at the very beginning of the amplifier
+stages and signals that have to be amplified are very small. Every
+little noises, interferences, parasitic oscillations are then
+amplified through all the remaining stages. In addition, the wire
+connecting the potentiometer to the gird cannot be generally very
+short, for practical assembling issues, and it acts as an antenna
+capturing electromagnetic interferences, which must be blocked
+before being amplified. Elsewhere, they can reach and destroy the
+speaker's tweeters.</p>
+<p class="c1"><img width="401" height="318" id="Immagine 25" src=
+"book_file/image034.png"></p>
+<p><a name="_Ref445591254">Figure</a> 23: The driver stage is
+basically a voltage amplifier. It takes the input signal coming
+from an externa source and applies it to the grid of the vacuum
+tube. Cathode bias is generally used in this stage, and the cathode
+resistor is generally bypassed by a capacitor to reduce the local
+negative feedback and increase the gain.</p>
+<p>Suppose, for instance, the high tension V+ is 300 V. If we use a
+12AX7 vacuum tube and choose a load <i>R<sub>a</sub></i> of 220k
+ohm, we obtain the loadline plotted in Figure 24. A good operating
+point, identified by the red spot, corresponds to a current
+<i>I<sub>b</sub></i> of 0.65 mA and an anode voltage of
+V<sub>a</sub> 160 Volts. This can be obtained with a grid to
+cathode voltage of -1.5 Volts. Since we are using cathode bias, the
+grid is at ground level, and we have to elevate the cathode voltage
+to 1.5 volts, by computing an appropriate value of the cathode
+resistor <i>R<sub>k</sub></i>. This can be obtained, as usual, with
+the ohm low as follows:
+<i>R<sub>c</sub></i>=<i>V<sub>k</sub></i>/<i>I<sub>b</sub></i>=1.5
+Volts/0.65 mA=2.3k ohm. The closest standard resistance is 2.2k
+ohm, which is a very good approximation. The bypass capacitor
+<i>C<sub>c</sub></i> has the purpose, as discussed in Section
+2.7.2, to reduce local negative feedback and increase gain. Its
+value determines the frequency at which its effect is more
+emphasized. Smaller values increase gain just for high frequencies,
+higher values increase gain also for low frequencies. <a>For
+instance, in our case, a value of 100 &#956;F is sufficient to
+bypass all audible frequencies.</a><a class="msocomanchor" id=
+"_anchor_5" onmouseover="msoCommentShow('_anchor_5','_com_5')"
+onmouseout="msoCommentHide('_com_5')" href="#_msocom_5" language=
+"JavaScript" name="_msoanchor_5">[GA5]</a> </p>
+<p class="c1"><img width="542" height="345" id="Immagine 10" src=
+"book_file/image035.png"></p>
+<p><a name="_Ref445623938">Figure</a> 24: Loadline and operating
+point obtained with a 12AX7 vacuum tube, with an anode load of 220k
+ohm, and a cathode resistance of 2.2k ohm.</p>
+<h2><a name="_Toc448603855">6.1    Directly Coupled
+concertina</a></h2>
+<p>In the example made in section 4.1, quiescent cathode voltage of
+the concertina was 100 Volts. In order to obtain a bias voltage of
+-1.25 Volts, with respect to the cathode, we had to bring the grid
+voltage to 100-1.25=98.75 Volts, by using a voltage divider. The
+coupling capacitor has the main purpose of isolating the grid
+voltage from the anode voltage of the driver stage. In fact, in the
+example given in Section 5:, the quiescent anode voltage was 160
+Volts. The coupling capacitor, basically, isolates the 98.75 Volts
+quiescent grid voltage of the concertina from the 160 Volts
+quiescent anode voltage of the driver. In this way, just the
+amplified signal goes from the driver anode to the concertina
+grid.</p>
+<p>However, in many cases, it is possible to set the quiescent
+operating points of both concertina and driver stages so that the
+quiescent anode voltage is exactly what is needed at the concertina
+grid. This allows directly coupling the driver and the concertina
+stage, eliminating both the coupling capacitor and the voltage
+divider. Eliminating those components, not only makes the schema
+simpler and cheaper. It also improves sonic quality of the
+amplifier. In fact, remember, that any components along the signal
+path slightly degrade the sound audio quality of the amplifier. The
+resulting schema of the Directly Coupled (DC) concertina is that
+shown in Figure 25.</p>
+<p class="c1"><img width="513" height="365" id="Immagine 19" src=
+"book_file/image036.png"></p>
+<p><a name="_Ref448565032"></a><a name="_Ref448565037">Figure</a>
+25: In a directly coupled concertina, bias voltage for the splitter
+grid can be taken directly from the anode of the driver. In order
+to do that, loadlines and operating points of both the driver and
+the splitter should be chosen so that, in the quiescent state,
+voltage at the anode should be below the voltage at the cathode of
+the splitter of a value corresponding to the wanted grid voltage
+bias. This allows eliminating the coupling capacitor between driver
+and splitter, and the voltage divider, needed to set the grid bias.
+Eliminating the coupling capacitor is particularly relevant, since
+less components along the signal path always improves sonic quality
+of the amplifier.</p>
+<p>Calculation to find the appropriate quiescent operating points
+and values of the relevant components can be done with the help of
+Figure 26. Let us first decide the operating point and static
+loadline of the concertina.</p>
+<p>Suppose we set the splitter high-tension voltage V<sup>s</sup>+
+equal to 380 Volts, and the values of the splitter anode and
+cathode resistors to 100k ohm. We obtain the static loadline
+corresponding to the red line in the figure. Suppose we want to set
+the quiescent operating point as highlighted by the red spot. This
+corresponds to an anode to cathode voltage of 168 Volts. Voltage
+drop across both anode and cathode resistors will be the same,
+given that the same amount of current goes through them and their
+resistance is the same as well. Given that the voltage drop across
+the vacuum tube is 168 Volts, voltage drop across each resistor is
+(380-168)/2=106 Volts. The cathode resistor is connected to ground,
+so this also represents the cathode voltage. The quiescent current
+is therefore 106/100k =1.06 mA. This operating point can be
+obtained by a bias voltage (grid to cathode) of -1.25 Volts,
+corresponding to a grid voltage of 104.75 Volts.</p>
+<p>We now need to setup the quiescent operating point of the drive
+stage so that its quiescent anode voltage is equal to 104.75 Volts.
+Choosing a driver high-tension voltage V<sup>d</sup>+ of 300 Volts
+and a load of 220k ohm we obtain the driver loadline depicted by
+the violet line in Figure 26. Quiescent anode voltage of 104.75 is
+obtained with a grid bias of about -0.75 Volts. The quiescent
+current is (300-104.75)/220k&#8776;0.9mA. The needed grid bias can
+be obtained, using the cathode biasing technique (see Section
+2.7.2), choosing a cathode resistor of 0.75/0.0009&#8776;820
+ohm.</p>
+<p>Using the above calculated values we are able to directly couple
+driver stage and concertina splitter stage, saving components,
+costs, and improving sonic quality of the amplifier.</p>
+<p>Remember also that when a signal is amplified we have also to
+consider the dynamic loadline of the concertina, as discussed in
+Section 4.1. The dynamic loadline is not relevant for setting the
+operating points of driver and concertina stages, so that directly
+coupling is possible. However, it should be taken into
+consideration, after the operating point has been chosen, to check
+that the concertina operates linearly. Suppose that the power stage
+grid leak resistors values are 180k ohm, we obtain the dynamic
+loadline depicted by the green line in Figure 26, which shows that
+the concertina operates in a fairly linear area.</p>
+<p class="c1"><img width="550" height="350" id="Immagine 12" src=
+"book_file/image037.png"></p>
+<p><a name="_Ref448565444">Figure</a> 26: Suppose we set the
+high-tension voltage of the splitter to 380 volts, and the anode
+and cathode resistances both to 100k ohm. We obtain the static
+loadline depicted by the red and green lines in the graph. Suppose
+we want to set the operating point of the splitter to 168 volts
+(anode to cathode voltage), as depicted by the red spot in the
+figure. The bias current will be (380-168)/200k=1.06 mA, and the
+cathode voltage 100k*0.00106=106 Volts. This can be obtained with a
+grid bias voltage of -1.25 Volts. In order to direct couple the
+driver and the splitter, the diver anode voltage should be 104.75
+Volts. This can be obtained by setting the driver high-tension
+voltage to 300 Volts, the load to 220k, and the grid bias to 0.075.
+In this way, we obtain the loadline depicted by the violet line,
+and the wanted quiescent anode voltage, as depicted by the blue
+spot.</p>
+<h2><a name="_Ref449172902"></a><a name="_Toc448603856">6.2   
+Global Negative Feedback</a></h2>
+<p>We have seen that push-pull stages are able to reduce harmonic
+distortions, specifically second order distortions, produced in the
+stage itself. The driver stage that we have discussed so far has a
+single-ended configuration. A single-ended stage, operating in
+non-linear areas, produces distortions. If the distorted
+pre-amplified signal is given to a push-pull stage, the distortions
+are amplified as well. A technique that we can use in this case, to
+reduce distortions, is the <i>global negative feedback</i>. Global
+negative feedback consists in using a <i>negative feedback
+loop</i>, which subtracts the output signal, appropriately
+attenuated, from the input signal. The effect of the global
+negative feedback can be explained intuitively as follows. If the
+input signal and the output signal are identical (even if of
+different amplitudes), the subtraction has the only effect of
+attenuating the input signal to be amplified. However, if the
+output signal is slightly different from the input signal, due to
+distortions, subtracting the output signal from the input signal
+has the effect of modifying the input signal to be amplified so
+that differences are reduced in the output signal.</p>
+<p>Figure 27 shows the basic schema of a global negative feedback
+loop. The output signal, with the same phase of the input signal,
+goes through the voltage divider, composed of resistors
+<i>R<sub>1</sub></i> and <i>R<sub>2</sub></i>, to the cathode of
+the driver vacuum tube. Resistor <i>R<sub>1</sub></i> is generally
+called the <i>feedback resistor</i>. The voltage divider has the
+purpose of attenuating the output signal and producing the wanted
+percentage to be used as feedback. If the output signal and the
+input signal have the same phase, this schema has the effect of
+subtracting the feedback signal from the input signal. In fact, in
+this case, the cathode voltage moves in the same direction of the
+signal, reducing the grid to cathode voltage. Note that if the
+output signal phase is inverted, with respect the input signal, it
+produces a positive feedback, having the opposite effect of
+increasing distortions and also producing oscillations.</p>
+<p class="c1"><img width="395" height="412" id="Immagine 28" src=
+"book_file/image038.png"></p>
+<p><a name="_Ref449176997">Figure</a> 27: Global negative feedback
+is obtained by feeding the attenuated output signal to the cathode
+of the driver vacuum tube. If the output signal and the input
+signal have the same phase, this has the effect of subtracting the
+first from the other, reducing distortions in the amplified signal.
+The voltage divider composed of the resistors R<sub>1</sub> and
+R<sub>2</sub> has the effect of attenuating the output voltage used
+as feedback. The capacitor C<sub>sn</sub> forms, with resistor
+R<sub>1</sub>, a step network to adjust the feedback signal phase
+so that there is no oscillation.</p>
+<h3>6.2.1    Gain with negative feedback</h3>
+<p>Let's suppose we operate the amplifier without global negative
+feedback. The <i>open loop gain</i> <i>A<sub>ol</sub></i>, that is
+the gain of the amplifier when no negative feedback is used, is the
+ratio between output and input signals</p>
+<p class="c1"><img width="65" height="45" src=
+"book_file/image039.png">.</p>
+<p>When we have a negative feedback loop, the signal that is
+amplified is the difference between the input signal and the
+feedback signal <img width="90" height="26" src=
+"book_file/image040.png">. The feedback signal
+<i>V<sub>fb</sub></i> is applied to the cathode and can be computed
+as</p>
+<p class="c1"><img width="177" height="46" src=
+"book_file/image041.png">.</p>
+<p>The factor <i>b</i> is the <i>feedback factor</i>, and
+corresponds to the effect of the voltage divider.</p>
+<p>The output signal obtained with a negative feedback loop is</p>
+<p class="c1"><img width="283" height="26" src=
+"book_file/image042.png">.</p>
+<p>Simplifying we obtain</p>
+<p class="c1"><img width="123" height="44" src=
+"book_file/image043.png">.</p>
+<p>Thus, given that the gain is the ratio between the output and
+the input signal, we have the <i>feedback equation</i> for
+computing the <i>closed loop gain</i> <i>A<sup>fb</sup></i> of the
+amplifier with global negative feedback:</p>
+<p class="c1"><img width="97" height="43" src=
+"book_file/image044.png">.</p>
+<p>The quantity <i>A</i><i>b</i> is generally called the <i>loop
+gain</i>, which is the gain seen "in" the feedback loop. The amount
+of feedback to be applied can be tuned by choosing <i>b</i>, by way
+of the voltage divider. The relationship between the values of the
+resistors of the voltage divider and <i>b</i> is as follows:</p>
+<p class="c1"><img width="73" height="45" src=
+"book_file/image045.png">.</p>
+<p>It is generally useful indicating the effect of the negative
+feedback in terms of <i>dB</i>, considering the ratio between the
+open loop and closed loop gain. The feedback expressed in <i>dB</i>
+is</p>
+<p class="c1"><img width="120" height="53" src=
+"book_file/image046.png">.</p>
+<p>From this we obtain that the closed loop gain of the amplifier
+can be written as</p>
+<p class="c1"><img width="89" height="53" src=
+"book_file/image047.png">,</p>
+<p>from which we have that</p>
+<p class="c1"><img width="87" height="54" src=
+"book_file/image048.png"></p>
+<h3>6.2.2    Benefits of negative feedback</h3>
+<p>The factor <img width="66" height="23" src=
+"book_file/image049.png">, or the equivalent <img width="67"
+height="25" src="book_file/image050.png">, can be used to determine
+both the reduction of noise and harmonic distortion, when negative
+feedback is used.</p>
+<p>Suppose that we do not use negative feedback, we apply an input
+signal <i>V<sub>in</sub></i>, and we obtain an output signal
+<i>V<sub>out</sub></i> with an harmonic distortion percentage
+<i>HD</i>. Then, we apply negative feedback, and we increase the
+input signal to <img width="21" height="22" src=
+"book_file/image051.png">, in order to compensate the gain loss, so
+that the output signal with and without feedback are the same
+<img width="65" height="25" src="book_file/image052.png">. The
+relationship between harmonic distortion, with and without negative
+feedback, at the same output signal levels, is</p>
+<p class="c1"><img width="193" height="52" src=
+"book_file/image053.png">.</p>
+<p>A negative feedback <i>f<sub>dB</sub></i> of 20 <i>dB</i> means
+10 times lower/better. So, closed loop gain will be 10 times lower
+than the open loop gain. However, noise will be also ten times
+lower, and harmonic distortion will be ten times lower as well.</p>
+<h3>6.2.3    Stability of negative feedback</h3>
+<p>Input signal and feedback voltage applied to the cathode should
+have the same phase, in order to have negative feedback operating
+correctly. When the signal goes through several stages, coupling
+capacitors, and the output transformers, its phase can be shifted
+significantly, especially at very low and very high frequencies. In
+some cases, phase-shift reaches 180&#176;, turning the negative
+feedback into a positive feedback at these frequencies. If the loop
+gain <i>A</i><i>b</i> is smaller than 1 (<img width="47" height=
+"23" src="book_file/image054.png">), this produces some gain peaks
+at these frequencies. However, if <i>A</i><i>b</i> is greater than
+1 (<img width="47" height="23" src="book_file/image055.png">), the
+amplifier will not converge to a gain value and will oscillate
+dangerously. In order to avoid that, the amplifier should be
+designed so that the frequencies, where the 180&#176; phase shifts
+occurs, should be outside the pass-band of the amplifier, where the
+gain is such that <i>A</i><i>b</i> becomes smaller than 1.</p>
+<p>If this is not possible, a <i>step-network</i> can be used to
+reduce the phase shift at the needed frequency, and move the
+180&#176; phase-shift outside of the pass-band. A step network can
+be obtained by using a capacitor in parallel with the feedback
+resistor, as shown in Figure 27, with capacitor
+<i>C<sub>sn</sub></i> and resistor <i>R<sub>1</sub></i>.</p>
+<p>Suppose, for instance, the gain of the amplifier is
+<i>A</i>=<i>355</i> (51dB). Suppose that the solid and dashed green
+plot in Figure 28respectively give the gain and phase-shift of the
+amplifier, with respect to the frequency. We can see that the
+amplifier introduces a phase-shift of -180&#176;, around 240k Hz,
+where the gain <i>A</i><sub>240Hz</sub> is still 25 (28dB). Suppose
+we apply a feedback factor <i>b</i> of 0.1, corresponding to
+<i>f<sub>dB</sub></i>=15.7dB, by setting <i>R<sub>1</sub></i> to
+10k ohm and <i>R<sub>2</sub></i> to 1k ohm. At 240k Hz we have that
+the loop gain is <i>b&#8729;A</i><sub>240Hz</sub>=0.1&#8729;25=2.5
+(<i>f<sub>dB</sub></i>=11.6). Since the loop gain is greater than
+one (<i>f<sub>dB</sub></i>&gt;6), the amplifier will oscillate. To
+avoid oscillation, we have to move the -180&#176; phase-shift, in
+the frequency domain, at least where the gain loop is smaller than
+1 (<i>f<sub>dB</sub></i>&lt;6). At that frequency the gain should
+be below 1/0.1=10, (20dB). The frequency where we have a 20dB gain
+is 400k Hz. At this frequency, the phase-shift is -220&#176;. To go
+below 180&#176; we have to compensate at least 40&#176;. Using a
+capacitor <i>C<sub>sn</sub></i> of 80 pF, in parallel with
+<i>R<sub>1</sub></i>, we obtain the frequency compensation shown in
+Figure 29. We can see that the phase compensation at 400 Hz is
+54&#176;. The solid and dashed blue line in Figure 28 represent the
+loop gain and its phase-shift. At 240kHz the phase shift is now
+-135&#176;, at 300k Hz it is -166&#176;. The -180&#176; phase-shift
+now occurs at 500k Hz, where the amplifier gain is 5 (14 dB), thus
+below the needed threshold, so the amplifier is stable.</p>
+<p><img width="642" height="277" id="Immagine 23" src=
+"book_file/image056.png"></p>
+<p><a name="_Ref449389085">Figure</a> 28: The gain and the phase
+shift of the amplifier, with respect to the frequency, represented
+respectively by the green solid and dashed lines, show that we have
+a -180&#176; phase-shift at 240k Hz, where the gain is still 28dB.
+Compensation applied to the feedback loop, produce the loop gain
+and a phase shift depicted by the blue solid and dashed lines. At
+240k Hz, the phase-shift is 135&#176;. 180&#176; phase-shift is at
+500k Hz, where amplifier gain is just 14dB.</p>
+<p><img width="643" height="277" id="Immagine 31" src=
+"book_file/image057.png"></p>
+<p><a name="_Ref449389104">Figure</a> 29: The step network,
+introduced in the feedback loop, produces the phase compensation
+depicted by the dashed line. We have 45&#176; compensation at 240k
+Hz and 54&#176; at 300 k Hz.</p>
+</div>

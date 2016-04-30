@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<div class="WordSection1">
+<h1><a name="_Toc448603837"></a><a name="_Ref445573126">3:     The
+electronic vacuum tube as a voltage amplifier</a></h1>
+<p>The variation of the voltage applied to the grid of an
+electronic vacuum tube, produces a variation of the current from
+the anode to the cathode.</p>
+<p>The range of variation of current that flows in a vacuum tube is
+typically limited from 0 up to a few milliamperes, in vacuum tubes
+used as <i>driver tubes</i> (for instance 12AX7 vacuum tubes), or
+from 0 up to a few tenths of milliamperes, in vacuum tubes used as
+power vacuum tubes (for instance EL34 vacuum tubes).</p>
+<p>A load, for instance a resistor, between the anode and the power
+supply, as shown in Figure 6, forms a voltage divider, with the
+resistance offered by the vacuum tube itself, which depends from
+the voltage applied to the grid. This configuration can be used to
+obtain a voltage or a power amplifier. When the voltage grid
+varies, the vacuum tube changes its internal resistance, and the
+voltage measured between the anode and the load, called the
+<i>anode voltage</i> or the <i>plate voltage</i>, changes according
+to the voltage divider equation:</p>
+<p class="c1"><img width="99" height="45" src=
+"book_file/image008.png">,</p>
+<p>Where <i>V<sub>a</sub></i> is the anode voltage,
+<i>R<sub>v</sub></i>, is the resistance offered by the vacuum tube,
+regulated by the grid voltage, and <i>R<sub>L</sub></i> is the load
+resistance.</p>
+<p>It is important to note that <i>the</i> <i>amplified voltage
+signal is inverted</i> with respect to the signal voltage applied
+to the grid. In fact, when the signal voltage increases, the
+current from anode to cathode increases as well, that is the
+resistance offered by the vacuum tube decreases, and
+correspondingly the voltage seen at the anode decreases as
+well.</p>
+<p>In case of vacuum tubes used as drivers, as for instance a 12AX7
+vacuum tube, given that the current flowing from the anode to the
+cathode is very small, we basically exploit only the voltage
+amplification, which is typically applied to the grid of the vacuum
+tubes of next stage. In output/power vacuum tube, however, given
+that more current can flow from the anode to the cathode, the load
+can dissipate a significant power. In this case, the load is not
+just used to form a voltage divider with the vacuum tube. The load
+is the component that actually makes use of the amplified power. In
+most cases, it consists of an output transformer or, in case of
+output transformer less (OTL) amplifier, a speaker.</p>
+<p>Once the power supply and the load are fixed, a variation of the
+grid voltage produces a variation of both the anode voltage and the
+anode current. These variations, when plotted, form a straight line
+called the <i>loadline</i>. This is further discussed in next
+section.</p>
+<p class="c1"><img width="436" height="261" id="Immagine 7" src=
+"book_file/image009.png"></p>
+<p><a name="_Ref430814307">Figure</a> 6: A vacuum tube can be used
+as a voltage amplifier by placing a load between the anode power
+supply and the anode itself. The load forms a voltage divider with
+the resistance offered by the vacuum tube, which can be controlled
+by varying the grid voltage. The voltage signal applied to the grid
+is amplified by the voltage signal seen at the anode.</p>
+<h2><a name="_Toc448603838"></a><a name="_Ref439693496">3.1    The
+loadline</a></h2>
+<p>A very useful information that is generally provided in the
+datasheet of an electronic vacuum tube, is the greph of the average
+anode characteristics. Figure 7 shows this graph for a 12AX7 vacuum
+tube. In the graph, every black plot corresponds to a certain
+voltage applied to the grid. Maintaining the grid voltage fixed,
+following the corresponding plot we can see the relatioships
+between the anode voltage and the anode current for a specific
+vacuum tube. However, if we change the grid voltage, we move from
+one plot to the other, in a direction that depends on the load and
+on the power supply V+.</p>
+<p>Specifically, the anode voltage and the current vary together
+along a straight line, whose slope depends on the load and its
+intersection, with the anode voltage, depends on the power supply
+V+. This line is called the <i>loadline</i> and is very useful for
+setting up the operating point, choosing the power supply, and the
+load.</p>
+<p>Drawing the loadline, in case of a resistive load, is
+straightforward. Suppose we apply 300V to the anode and that no
+load is applied to the anode, that is <i>R<sub>L</sub></i>=0. Using
+the voltage divider equation, that we introduced in previous
+section, we can see that we always have
+<i>V<sub>a</sub></i>=<i>V+</i>. If we vary the grid voltage from
+-4.0 to -1.5, given that the anode voltage is always
+<i>V<sub>a</sub></i>=300V, the current varies from 0 up to 3 mA,
+following the red stright vertical line, drawn in the figure.</p>
+<p>Suppose the load applied between the anode and power supply is
+<i>R<sub>L</sub></i>=150K ohm. When the the grid voltage is below
+-4V, the vacuum tube does not conduce. This means that its internal
+resistance is infinite <i>R<sub>v</sub></i>=&#8734;, therefore,
+according to the voltage divider equation, the voltage seen at the
+anode tends to 300V and no current flows. On the other extreme,
+when the vacuum tube is fully conducting, its internal resistance
+goes (almost) to <i>R<sub>v</sub></i>=0, and according to the
+voltage divider equation, the anode voltage is also 0. In this case
+the current flowing is obtained using the Ohm law as
+<i>I</i>=<i>V+</i>/<i>R<sub>L</sub></i>=300V/(150k ohm)=2mA. Note
+that this in practice never happens. In fact, even when the grid
+voltage is 0, the vacuum tube always offer a small internal
+resistance which prevents the anode voltage to go to 0. The
+loadline, is the straight line that goes through the two points
+(minimum and maximum conduction) that we have identified above,
+depicted by the green line in the figure.</p>
+<p>A load with a small resistance produces a more vertical
+loadline, while large values make a more horizontal loadline. Small
+values produce more current and less voltage swing, while large
+values mainly work on voltage variations.</p>
+<p class="c1"><img width="419" height="283" id="Immagine 3" src=
+"book_file/image010.png"></p>
+<p><a name="_Ref434048436">Figure</a> 7: Average anode
+characteristic of a 12AX7 triode. Every (black) plot corresponds to
+the relationships between anode voltage (x axis) and current from
+anode to cathode (y axis), at a fixed grid voltage. If we maintain
+the anode voltage fixed and we vary the grid voltage, the current
+varies following a vertical line (for example along the red line).
+If a load is applied between the anode and the power supply, this
+form a voltage divider with the vacuum tube and both voltage and
+current vary when the grid voltage varies (for example along the
+green line). The line along which the vacuum tube operates depends
+on the impedance of the load and is called the loadline.</p>
+<h2>3.2    Gain</h2>
+<p>Datasheets of electronic vacuum tubes generally specify some
+additional parameters that can be used to determine how the signals
+applied to the grid are amplified. Two very useful parameters are
+the <i>amplification factor</i> <i>m</i> and the <i>anode
+resistance</i> (or <i>plate resistance</i>)
+<i>r<sub>a</sub></i>.</p>
+<p>The amplification factor is defined as the ratio between the
+anode voltage variation and the grid voltage variation:</p>
+<p class="c1"><img width="61" height="47" src=
+"book_file/image011.png">.</p>
+<p>The amplification factor represents the maximum voltage
+amplification possible for a vacuum tube, which can be ideally be
+obtain with a load with infinite resistance. This parameters is
+very stable along various operating conditions of the vacuum
+tube.</p>
+<p>The anode resistance is defined as ratio between the anode
+voltage variation and the anode current variation, when the grid
+voltage is maintained constant:</p>
+<p class="c1"><img width="62" height="45" src=
+"book_file/image012.png">, with <i>V<sub>g</sub></i> constant.</p>
+<p>The anode resistance is the resistance offered by the vacuum
+tube when the grid voltage is maintained constant and we vary the
+anode voltage. It can be seen as a series resistance between the
+vacuum tube and the anode pin. Its value is not stable and depends
+on the anode voltage at which the vacuum tube is operating.
+Datasheets, generally report various values of the anode
+resistance, associated with the corresponding anode voltage.</p>
+<p>Using these parameters, and the value of the resistance
+<i>R<sub>L</sub></i> of the load we can obtain the voltage gain of
+the voltage amplifier as follows</p>
+<p class="c1"><img width="88" height="45" src=
+"book_file/image013.png">.</p>
+<p>In fact, the load and the anode resistance form a voltage
+divider, which reduce the pure gain of the vacuum tube.</p>
+<p> </p>
+<h2><a name="_Toc448603839"></a><a name="_Ref439693507">3.3   
+Operating point and bias</a></h2>
+<p>The operating point was intuitively introduced in Section
+2.1.1using the metaphor of the hydraulic valve. We discussed that
+the operating point corresponds to the amount of water that flows
+when the valve is in idle state, that is when no signal is applied
+to the valve and it stands in a fixed position. We discussed that
+we generally want that a certain amount of water flows even when no
+signal is applied. A signal applied to the valve basically makes
+the water flow to vary around the operating point.</p>
+<p>Going back to vacuum tubes, once we chose a loadline, the idle
+operating point correspond to the position on the loadline, when no
+signal is applied to the grid. Suppose a fixed voltage of -1,5
+Volts is applied to the grid. In this case, the operating point
+highlighted by the red spot in Figure 8. The fixed voltage applied
+to the grid is commonly referred as the <i>bias</i> of the vacuum
+tube. Suppose we apply an input sinewave signal that ranges between
++1 an -1 volts to the grid. This signal, added to the bias,
+produces an oscillation of the voltage applied to the grid in the
+range from -0.5 up to -2.5. This, in turns, produces a
+corresponding oscillation along the loadline, around the operating
+point, as depicted by the red range shown in the figure. If the
+operating point is chosen too high, that is if the bias is too
+high, as depicted by the blue spot and range, then <i>clipping</i>
+occurs when the signal oscillation produce a grid voltage above 0
+Volts. In fact, when grid voltage is zero, the vacuum tube has the
+maximum conductance, and no additional current is possible even
+with higher grid voltages. On the other hand, if the bias is too
+low, as depicted by the violet spot and range, then the current
+suddenly is cut-off when the signal applied to the grid produce a
+too small voltage.</p>
+<p class="c1"><img width="434" height="322" id="Immagine 11" src=
+"book_file/image014.png"></p>
+<p><a name="_Ref434059561">Figure</a> 8: If the operating point is
+to high (blue spot and blue range) large signals applied to the
+grid produce clipping, since when the grid voltage is 0 we have the
+maximum conductance between cathode and anode. On the other hand,
+when the operating point is too low (violet spot and violet range),
+too small signals bring to zero conductance between cathode and
+anode. The operating point also determines the linearity response
+of the vacuum tube. If the operating point is correctly chosen (for
+instance, red spot and red range), the vacuum tube reacts linearly
+to the entire signal range applied to the grid.</p>
+<p>The optimal choice of the loadline and of the operating point
+should be taken trying to find an operating range where the vacuum
+tube operates linearly. The optimal choice should guarantee that
+variations of the voltage applied to the grid should be linearly
+reflected in variations along the loadline. Graphically, this means
+that the operating curves of the vacuum tube corresponding to
+different negative voltages applied to the grid should be evenly
+distributed along the portion of the loadline used. For instance,
+in Figure 8, the intersections between the black plots and the
+green loadline are denser in correspondence of value of the grid
+voltage around -3.0 Volts. This means that, when the grid voltage
+oscillates around -3.0 Volts produce smaller variation of the anode
+voltage than when the grid voltage oscillates around -1.0 Volts. If
+we apply to the grid a signal that span from -1.0 to -3.0 Volts,
+this is not linearly amplified and distortions of the signal are
+produced.</p>
+<h2><a name="_Toc448603840"></a><a name="_Ref443829913">3.4   
+Amplifier classes</a></h2>
+<p>The operating point also determines the operating class of the
+amplifier.</p>
+<p>In a <i>Class A</i> amplifier, the bias is set so that the
+vacuum tube conducts and amplifies the entire input signal. For
+instance, if the operating point is set in correspondence of the
+red spot in Figure 8, the obtained amplifier operates in class A,
+since it can amplify the entire input signal. Top plot in Figure 9,
+depicts a signal amplified by a Class A amplifier.</p>
+<p>A <i>Class B</i> amplifier amplifies just half input signal.
+Suppose the bias is set so that it is very close to, or on top of,
+the intersection of the green loadline and the horizontal axis in
+Figure 8. In this case, just the upper part of the signal is
+amplified, and the vacuum tube cuts-off in correspondence of the
+remaining part of the signal. Centre plot in Figure 9, depicts a
+signal amplified by a Class B amplifier. Class B amplifiers are
+more efficient since there is no current when there is no input
+signal. In a Class A amplifier, significant current traverse the
+vacuum tube also in case of quiescence.</p>
+<p><i>Class AB</i>amplifiers are a compromise between class A and
+Class B. The bias is set so that most of, but not all, the signal
+is amplified. Suppose the operating point is set in correspondence
+of the violet spot in Figure 8. In this case. The upper part of the
+signal is entirely amplified. The lower part of the signal is
+amplified until the intersection of the green loadline and the
+horizontal axis is reached. At this point the vacuum tube cuts off,
+so part of the output signal is missing. Lower plot in Figure 9,
+depicts a signal amplified by a Class AB amplifier. Class AB
+amplifiers are more efficient than Class A amplifiers and less than
+Class B amplifiers.</p>
+<p class="c1"><img width="420" height="516" id="Immagine 13" src=
+"book_file/image015.png"></p>
+<p><a name="_Ref443829572">Figure</a> 9: Operating classes. Top
+plot depicts Class A operation, where the entire signal is
+amplified. Centre plot shows Class B operation. In this case, just
+half signal is amplified. Class AB amplifiers, in the lower plot,
+amplify most of the signal, and cut-off when the input signal is
+below a certain threshold.</p>
+<h2><a name="_Toc448603841">3.5    Biasing techniques</a></h2>
+<p>The grid voltage must be negative with respect to the cathode
+voltage. When the amplifier is in a quiescent state, the negative
+electric potential difference between the grid and the cathode
+determines the quiescent operating point. When a signal, in the
+form of a voltage variation, is applied to the grid, this is added
+to the bias voltage and it is amplified. There are two widely used
+techniques to provide the grid with negative voltage, with respect
+to the cathode. The first technique, called <i>fixed</i>
+<i>bias</i>, needs a separate voltage supply that offers the wanted
+negative voltage. The second technique, called <i>cathode bias</i>,
+or <i>self bias</i>, connects the grid to ground and elevates the
+cathode voltage so that the grid is negative with respect to it.
+There are also variations of these two basic techniques that we
+will not discuss here.</p>
+<h3><a name="_Toc448603842">3.5.1    Fixed bias</a></h3>
+<p>A very simple schema to provide negative voltage to the grid is
+given in Figure 10. We use two different voltage supplies. The
+voltage supply V<sub>1</sub> is used to give the high tension V+ to
+the anode of the vacuum tube. The voltage supply V<sub>2</sub> is
+used to generate the gird bias voltage V<sub>g</sub>. The negative
+grid bias -V<sub>g</sub> is obtained by connecting the two voltage
+supplies in series. The positive of V<sub>2</sub> is connected to
+the negative of V<sub>1</sub>. This connection is also connected to
+ground. In this way, the positive of V<sub>2</sub> is at ground
+level and the negative is at -V<sub>g</sub> with respect to ground
+and to the cathode, provided it is also connected to ground. The
+grid receives the -V<sub>g</sub> bias voltage using a resistor
+<i>R<sub>l</sub></i>. Given that no current goes trough the grid,
+in normal operations, the resistor <i>R<sub>l</sub></i> does not
+affect the voltage seen at the grid. Its use will be better
+discussed in Section 3.1. At this point, we just mention that one
+of the purposes of <a><i>R<sub>l</sub></i> (also called the <i>grid
+leak</i>) is to provide to the input signal, received by previous
+stage, with a high impedance path</a><a class="msocomanchor" id=
+"_anchor_1" onmouseover="msoCommentShow('_anchor_1','_com_1')"
+onmouseout="msoCommentHide('_com_1')" href="#_msocom_1" language=
+"JavaScript" name="_msoanchor_1">[GA1]</a> .</p>
+<p class="c1"><img width="333" height="320" id="Immagine 4" src=
+"book_file/image016.png"></p>
+<p><a name="_Ref444428194">Figure</a> 10: Fixed bias can be
+obtained by using a separate voltage supply. Voltage supply
+V<sub>1</sub> produce the high tension V+ to be given to the vacuum
+tube anode. Voltage supply V<sub>2</sub> produces the voltage
+V<sub>g</sub> for the grid. The negative voltage -V<sub>g</sub> is
+obtained by connecting the positive of V<sub>2</sub> to the
+negative of V<sub>1</sub> and both to ground. In this way, the
+negative of V<sub>1</sub> and the positive of V<sub>2</sub> are at
+ground, the negative of V<sub>2</sub> is at -V<sub>g</sub> and can
+be connected to the grid.</p>
+<p> </p>
+<h3><a name="_Toc448603843"></a><a name="_Ref445547858">3.5.2   
+Cathode or self bias</a></h3>
+<p>Negative voltage between grid and cathode can be obtained by
+connecting the grid to ground and by elevating the cathode voltage.
+This technique is generally referred as <i>cathode bias</i> or
+<i>self bias</i>. A very easy way to elevate cathode voltage is to
+connect it to ground through a resistor, as shown in Figure 11. The
+resistor <i>R<sub>k</sub></i>, generally called the <i>cathode
+resistor</i>, forms a voltage divider with the vacuum tube itself
+and the load. Given that current goes trough the vacuum tube, also
+in the quiescent state, the voltage at the cathode will be above
+ground. Thus, the grid, being connected to ground, will be negative
+with respect to the cathode. The value of <i>R<sub>k</sub></i> can
+be computed using the ohm law by knowing the bias current, which
+should go through the vacuum tube when it is quiescent, and the
+negative grid voltage, needed to have this current. Suppose we use
+a 12AX7 vacuum tube and that we want a bias current of 0.75 mA.
+Using the characteristics curves of this vacuum tube, from Figure
+8, we see that, when the high tension V+ is 300 Volts, a grid
+voltage of -1.5 Volts, with respect to the cathode, is needed to
+obtain 0,75 mA. Using the ohm law we have
+<i>R<sub>k</sub></i>=V/I=1.5V/0.75 ma=2k ohm.</p>
+<p>It is worth nothing that the cathode resistor introduces a form
+of local negative feedback. In fact, when the anode current
+increases, the cathode voltage increases as well, since the
+resistance offered by the vacuum tube decreases. In this case, the
+grid becomes more negative and tends to reduce the vacuum tube
+conductions. When anode current decrease, we have the opposite
+effect and the grid become less negative, increasing vacuum tube
+conduction. In other words, the cathode resistor tends to oppose
+the amplification of the signal, by in fact reducing the gain of
+the vacuum tube. In order to reduce this effect, a <i>bypass or
+decoupling capacitor</i> <i>C<sub>k</sub></i>, is sometimes
+introduced in the circuit, as shown in Figure 11. The bypass
+capacitor compensates the cathode voltage variation trying to
+maintain it as stable as possible. In this way local negative
+feedback is significantly reduced and gain significantly increased,
+similarly to fixed bias.</p>
+<p>Note that the grid is not directly connected to ground. Rather a
+resistor leak <i>R<sub>l</sub></i> is used, as we already discussed
+for the fixed bias. Given that there is no current in the grid, its
+voltage is practically at ground level.</p>
+<p class="c1"><img width="310" height="416" src=
+"book_file/image017.png"></p>
+<p><a name="_Ref444453142">Figure</a> 11: The negative voltage of
+the grid with respect to the cathode can be obtained by connecting
+the grid to ground and by elevating the cathode voltage by means of
+a resistance called the cathode resistor. This resistor forms a
+voltage divider with the vacuum tube and the load. By carefully
+choosing the resistance value, according to the wanted bias current
+the cathode voltage can be elevated so that the grid is negative
+with respect to it. The cathode resistor can also be bypassed by a
+bypass capacitor to reduce the negative feedback introduced by the
+cathode resistor and increasing gain.</p>
+</div>

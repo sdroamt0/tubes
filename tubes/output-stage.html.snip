@@ -1,11 +1,445 @@
 <!DOCTYPE html>
-<h2>Output stage</h2>
-<p>
-This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text 
-</p>
-<p>
-This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text 
-</p>
-<p>
-This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text This is the output stage placeholder text 
-</p>
+<div class="WordSection1">
+<h1><a name="_Toc448603844">4:     Output stage</a></h1>
+<p>The output stage has the purpose of amplifying the signal,
+possibly produced by a driver stage, so that the necessary power to
+drive a speaker is obtained. In the following, we will discuss the
+two most used configurations of power amplifiers. First, we will
+introduce the <i>Single Ended</i> configuration, where a single
+vacuum tube is used to amplify the signal. Then, we will introduce
+the <i>Push-Pull</i> configuration, where a pair of vacuum tubes
+are used to simultaneously amplify, respectively, a 180 degree
+inverted version of the same signal, increasing output power and
+reducing distortions.</p>
+<p class="c1"><img width="502" height="282" id="Immagine 6" src=
+"book_file/image018.png"></p>
+<p><a name="_Ref439686914">Figure</a> 12: Characteristic curves of
+an EL34 power vacuum tube. Red lines shows various options of
+loadlines possible with this vacuum tube. In this example possible
+values range from 1.1K ohm, to 5.4K ohm.</p>
+<h2><a name="_Toc448603845"></a><a name="_Ref444452182">4.1   
+Single Ended configuration</a></h2>
+<p>Figure 12 depicts the characteristic curves of EL34 power vacuum
+tubes. Red lines represents various loadlines corresponding to
+various loads applied to the anode of the vacuum tube. Each
+loadline is also tagged with the corresponding load impedance. The
+maximum power that can be dissipated by the anode of an EL34 is
+25W, corresponding to the dashed line marked as
+"W<sub>a</sub>=25W". All depicted options for the loadlines lay
+below this dashed line.</p>
+<p>In this example, we can see that load impedance varies from 1.1K
+ohm to 5.4K ohm. These values are all far from reasonable values of
+impedance of commercial speakers, where typically impedance ranges
+from 4 ohm to 16 ohm. Thus, a speaker cannot be directly used as a
+load in this case.</p>
+<p>An output transformer is generally used to adapt the impedance
+required by the output vacuum tubes to the impedance of the
+speakers. Output transformers also eliminate the DC applied to the
+anode, so that speakers just see the AC corresponding to the
+amplified signal.</p>
+<p>Figure 13 depicts the basic schema of Single Ended power output
+stage using a tetrode (or a pentode, here the suppressor terminal
+is not shown) in ultra-linear configuration (see Section 2.2.4) and
+an output transformer.</p>
+<p>The high voltage V+ is applied to the anode of the power vacuum
+tube through the primary of the output transformer. The screen
+terminal of the power vacuum tube is connected to a tap from the
+primary of the output transformer, corresponding to the wanted
+percentage of the anode output signal, to obtain the ultra-linear
+configuration.</p>
+<p>The resistance <i>R<sub>screen</sub></i>, called <i>screen
+stopper</i>, which connects the screen to the transformer tap, is
+mainly used to limit the current from the screen, and to avoid
+parasitic oscillations of the circuit. Screen current is
+particularly dangerous when the power vacuum tube is overdriven,
+for instance in case of guitar amplifiers. Typically, values around
+1K ohm 2W are used. Smaller values or no resistance at all, is
+sometimes used in HiFi amplifiers.</p>
+<p>The resistance <i>R<sub>g</sub></i>, called <i>grid stopper</i>,
+is used to block high frequency parasitic oscillations and reduce
+radio interference. The internal components of a vacuum tube
+produce some parasitic capacitance, often referred as the <i>Miller
+effect</i>. The grid stopper, together with this capacitance, form
+a low pass filter. The value of the grid stopper mainly depends on
+the capacitance of the vacuum tube. Values around 4.7K ohm are
+generally used for EL34 power vacuum tubes.</p>
+<p>The resistance <i>R<sub>l</sub></i>, is the <i>grid leak
+resistor</i>. The reference bias voltage goes through this
+resistance. It offers a high impedance path to ground to the AC
+signal coming from the previous stage. In addition, it also helps
+in discharging the positive ions that can accumulate on the grid
+due to gas ions forming in the vacuum tubes. This effect is
+particularly dangerous since it can cause <i>thermal runaway</i>.
+In fact, if positive charges are accumulated on the grid, the grid
+become less negative with respect to the cathode and the vacuum
+tube conducts more. More current in the vacuum tube produce more
+gas ions than accumulate on the grid and more current, until the
+vacuum tube is destroyed. The correct value for the grid leak is a
+matter of compromise. Large values are preferable to provide
+previous stage with a high AC impedance to ground. Small values are
+preferable to help the grid to discharge the accumulated positive
+gas ions. Datasheets generally provide maximum allowed values for
+the grid leak, in terms of maximum impedance from the grid to the
+cathode. For instance, Philips EL34 datasheet specifies maximum
+0.5M ohm in class B, or 0.7M ohm in class A or AB.</p>
+<p>The capacitor <i>C<sub>c</sub></i>, is the <i>coupling
+capacitor</i>. It isolates the previous stage from the power stage.
+DC is blocked, while AC goes through the capacitor and continues to
+ground through the grid leak. No current goes in the vacuum tube,
+since it has a very high impedance and the grid sees just voltage
+signal. The coupling capacitor and the grid leak form a high pass
+filter. The value of the capacitor has to be chosen according to
+the desired low <a>frequency cut-off. For instance, if the grid
+leak is 200K ohm and we want a frequency cut-off at 7 Hz, we can
+use the low pass filter equation to obtain:</a><a class=
+"msocomanchor" id="_anchor_2" onmouseover=
+"msoCommentShow('_anchor_2','_com_2')" onmouseout=
+"msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript"
+name="_msoanchor_2">[GA2]</a> </p>
+<p class="c1"><img width="354" height="24" src=
+"book_file/image019.png"></p>
+<p class="c1"><img width="404" height="222" id="Immagine 21" src=
+"book_file/image020.png"></p>
+<p><a name="_Ref439692574">Figure</a> 13: Basic schema of a Single
+Ended power output stage. The load of the vacuum tube consists of a
+transformer that accommodates the amplified signal so that it can
+be applied to the speaker. The transformer transforms the impedance
+of the speaker into an impedance that can be effectively applied to
+the anode of the vacuum tube.</p>
+<h3><a name="_Toc448603846"></a><a name="_Ref444355302">4.1.1   
+Reactive load and loadline computation</a></h3>
+<p>In an output transformer, the ratio between the number of turns,
+of the primary and the secondary, determines the impedance seen at
+the anode, when a load (a speaker in our case) is connected to the
+secondary, and an AC signal goes through the primary circuit of the
+output transformer.</p>
+<p>Let <i>n<sub>p</sub></i> and <i>n<sub>s</sub></i> be
+respectively the number of turns of the primary and secondary. Let
+<i>V<sub>p</sub></i> and <i>V<sub>s</sub></i> respectively the AC
+voltage seen at the primary and the secondary. Finally, let
+<i>Z<sub>p</sub></i>, and <i>Z<sub>s</sub></i>, be respectively the
+impedance seen at the primary and the impedance of the speaker. We
+have the following equations:</p>
+<p class="c1"><img width="62" height="49" src=
+"book_file/image021.png"> and <img width="81" height="56" src=
+"book_file/image022.png">.</p>
+<p>In other words, the ratio between the primary and secondary
+voltages is equal to the ratio between the primary and secondary
+turns. The ratio between the primary and secondary impedances is
+equal to the square of the ratio between the primary and secondary
+turns.</p>
+<p>It is worth nothing that, according to the second equation, we
+can change the impedance, seen by the anode of the vacuum tube, by
+changing the impedance of the speaker. The impedance of the speaker
+is reflected to the primary of the transformer, according to the
+number of turns of the primary and secondary of the transformer.
+Suppose that we use a speaker with an impedance of 8 ohms and we
+want to have a load of 3.8K ohms to be seen by the anode. Then, the
+square of the ratio between the primary and secondary turns should
+be 3.8k/8=475. If we connect a speaker of 4 ohm to the secondary of
+the same transformer, then the impedance seen by the anode will be
+475*4 ohm=1.9K ohm. If we connect a speaker of 16 ohm, we will have
+475*16 ohm=7600 ohm.</p>
+<p>A transformer is a reactive load that offers an impedance just
+when an AC signal goes through its primary. There is no impedance
+when just DC is applied to the primary. When no AC signal is
+applied to the grid, the vacuum tube is in a quiescent state and no
+AC signal is produced at the anode. In this case, only the DC
+current, regulated by to the grid bias (see Section 2.5), goes
+through the primary and no impedance is seen by the anode. In this
+case, also no signal is transferred from the primary to the
+secondary of the transformer.</p>
+<p class="c1"><img width="505" height="291" id="Immagine 5" src=
+"book_file/image023.png"></p>
+<p><a name="_Ref443066632">Figure</a> 14: In case of a resistive
+load, with an anode voltage of 400V, the loadline would be along
+the green line, and the operating point with a bias current of 40mA
+would be at the green spot. However, an output transformer has a
+reactive behaviour. In this case, there is a resistance just when
+an AC signal goes through it. There is no resistance when the
+vacuum tube is quiescent, so the quiescent voltage remains 400V
+independently of the bias current. In case of a bias current of
+40mA the operating point is depicted by the red spot. When the
+vacuum tube amplifies an AC signal, an AC current goes from anode
+to cathode and trough the transformer, which now offers a
+resistance. The loadline, in this case, as depicted by the red
+line, is parallel to the resistive loadline, and shifted so that it
+passes through the operating point. Note that the voltage reached
+by the anode, in case of a reactive load, might be higher than the
+voltage V+ applied to the transformer primary. This is due to the
+transformer reacting to current variations, virtually accumulating
+and releasing energy accordingly.</p>
+<p>If we had a resistive load, we could have computed the loadline
+as we described in Section 3.1. For instance, suppose we have a
+load of 3.8k ohm and a voltage V+ of 400V. When there is no current
+from anode to cathode the anode voltage is 400V. When the vacuum
+tube does not offer resistance, the anode voltage is 0 and the
+current is 400V/3.8k ohm=105mA. We can draw the resistive loadline,
+which correspond to the green line in Figure 14. Suppose we apply a
+bias current of 40mA, then the quiescent operating point
+corresponds to the green spot in the figure.</p>
+<p>However, in our case the load is an output transformer, which
+has a reactive load. The transformer offers resistance just to AC
+signals that go through it. There is almost no resistance to DC.
+More specifically, when the vacuum tube is in a quiescent state,
+just DC goes from the anode to the cathode, corresponding to the
+bias current. In this case, the transformer does not offer any
+resistance. This means that the voltage applied to the cathode is
+the same than the V+ voltage applied to the transformer primary,
+400V in our example. Therefore, if the bias current is 40mA, the
+operating point is depicted by the red spot in Figure 14. When an
+AC signal goes through the vacuum tube, the transformer offers its
+3.8k ohm of impedance, so the anode voltage and current start
+oscillating along the reactive loadline represented by the red line
+in the figure. Note that reactive loadline is parallel to the
+resistive loadline, and shifted higher so that it goes through the
+reactive operating point. It might seem strange that the anode
+voltage can now reach values higher than the 400V applied to the
+transformer primary. However, this is normal and is due to the fact
+that the transformer reacts to current variations, virtually
+accumulating and releasing energy in accordance to these
+variations.</p>
+<p>When you chose an output transformer for you vacuum tube
+amplifier, once you have chosen your loadline, you should check
+both the transformer primary and secondary impedances, stated by
+the transformer manufacturer. It is also worth mentioning that
+speakers, generally do not have a constant impedance. Rather, the
+speaker's impedance varies with the frequency of the sound being
+reproduced. Figure 15 shows the real impedance of speakers rated
+for 11 ohm. The real impedance is very high around 100 Hz. It goes
+to 6 ohm at 400 Hz, then jumps to 11 ohm at 3k Hz, and then back at
+4 ohm to 20k Hz. This means that the slope of the loadline might
+vary significantly depending on the reproduced frequencies. The
+loadline, that is typically plotted as thin line, is in fact a
+blurred area around the thin loadline.</p>
+<p class="c1"><img width="510" height="269" id="Immagine 20" src=
+"book_file/image024.png"></p>
+<p><a name="_Ref444361704">Figure</a> 15: In a real speaker the
+impedance varies with the frequency of the sound being reproduced.
+The graph above refers to real speakers rated for 11 ohm. However,
+real impedance varies from 4 ohms at frequencies around 20k Hz, to
+11 ohm around 3k Hz. There is also s mall difference between right
+and left speaker.</p>
+<h2><a name="_Toc448603847">4.2    Push-Pull configuration</a></h2>
+<p>In a push-pull amplifier, two vacuum tubes are used each to
+amplify phase-inverted copies of the same signal. The amplified
+signals are also phase inverted as well and are combined together
+using an output transformer appositively conceived for push-pull
+configuration. The push-pull output transformer has a centre tap
+were the high voltage V+ is applied. The two ends of the output
+transformer are symmetrically connected to the two anodes of the
+vacuum tubes. A phase splitter is used, before the stage, to create
+two phase-inverted copies of the same input signal.</p>
+<p>The basic schema of a push-pull amplifier stage is depicted in
+Figure 16. It is composed of two vacuum tubes having an identical
+configuration and circuitry. The centre tap of the primary of the
+push-pull output transformer receives the V+ voltage. Anodes of the
+two vacuum tubes are connected to the two ends of the output
+transformer primary. Similarly, the two taps for ultra-linear
+configuration are connected to the two screens of the vacuum
+tube<a>s. If we consider just half transformer and one vacuum tube,
+the schema is practically identical to the single ended
+configuration</a><a class="msocomanchor" id="_anchor_3"
+onmouseover="msoCommentShow('_anchor_3','_com_3')" onmouseout=
+"msoCommentHide('_com_3')" href="#_msocom_3" language="JavaScript"
+name="_msoanchor_3">[GA3]</a> . A push-pull can be seen as two
+single ended stages connected together through the push-pull output
+transformer. When no signal is applied to phase splitter, no signal
+I received by the two power vacuum tubes and just the bias current
+flows from anode to cathode. The current enters from the
+transformer primary centre tap and flows in opposite direction
+through the transformer toward the first and the second vacuum
+tube. Since the current flows in opposite directions, in the two
+half of the transformer, one current cancel the electro-magnetic
+effect of the other. Therefore, push-pull transformers core can be
+made smaller than single ended ones and without air gaps. In order
+to have signals with inverted phases at the grid of the two vacuum
+tubes, a phase splitter is used that take the input signal and give
+the two signals to the push-pull stage. Phase splitters will be
+discussed later in Section 4:. The two amplified signals are
+identical, even if they have inverted phases, and make the current
+to vary symmetrically, with respect to the bias current, in the two
+half of the push-pull transformer. When in one half of the
+transformer current increases, with respect to the bias current, in
+the other half current decreases of the same amount. The same
+effect happens to the voltage seen by the two anodes of the two
+vacuum tubes. On the load line, this effect is seen as the
+operating point of the vacuum tubes moving in opposite directions,
+as depicted in Figure 17, where the operating points of the two
+vacuum tubes are represented respectively by the .green and yellow
+arrow.</p>
+<p class="c1"><img width="412" height="290" id="Immagine 22" src=
+"book_file/image025.png"></p>
+<p><a name="_Ref443497082">Figure</a> 16: Example of a push-pull
+configuration. The phase splitter, which will be discussed later,
+takes the input signal and returns two copies of the same signal
+with each with phase inverted with respect to the other. The two
+signals are given to two vacuum tubes that amplify them separately.
+The primary of the output transformer used for a push-pull stage
+has a centre tap that takes the high voltage. The two ends of the
+primary go to the anodes of the two vacuum tubes. Given that the
+two vacuum tubes amplify signals that are 180&#176; one from the
+other, in the two ends current varies with opposite amounts. That
+is, when in one end current increases, in the other end current
+decreases of the same amount.</p>
+<p>The power vacuum tubes used in a power stage should be perfectly
+matched to guarantee a symmetrical behaviour. In order to fine tune
+the two power vacuum tubes, the two bias voltages V<sub>1</sub>-
+and V<sub>2</sub>- should be adjustable so that the quiescent bias
+current is exactly the same in the two vacuum tubes.</p>
+<p class="c1"><img width="490" height="276" id="Immagine 16" src=
+"book_file/image026.png"></p>
+<p><a name="_Ref444356433">Figure</a> 17: The two power vacuum
+tubes are at the same operating point, depicted by the red spot,
+when quiescent. When a signal is amplified, since the vacuum tubes
+receive signals with inverted phases, they move in different
+directions. When one conducts more, as depicted by the green arrow,
+the other conduct less, as shown by the yellow arrow.</p>
+<h3><a name="_Toc448603848"></a><a name="_Ref444355662">4.2.1   
+Push-pull advantages</a></h3>
+<p>Push pull amplifiers offers some advantages with respect to
+single ended. We already mentioned that output transformers can be
+made smaller than those needed for single ended amplifiers. Two
+additional advantages are the reduction of the harmonic
+distortions, and the increased output power.</p>
+<p>When the vacuum tube's operating range is in an asymmetrically
+nonlinear area, that is when it is more dense on one side of the
+loadline (the grid voltage lines will intersect more densely the
+loadline), and less dense in the other side (the grid voltage lines
+will intersect less densely the loadline), second order harmonics
+are generated. For instance, in Figure 14, grid voltage lines
+intersect the red loadline more densely with an anode voltage
+higher than 400 volts, than with an anode voltage lower than 200
+volts. Therefore, half signal is amplified very differently than
+the other half signal. Remember that the signal corresponds to
+different grid voltages, so to different points along the loadline
+identified by the intersection of the grid voltage lines with the
+loadline. Figure 18 shows this effect. In the upper plot the anode
+current of two vacuum tubes in push-pull are shown. Since each
+vacuum tube amplifies a phase inverted signal, with respect to the
+other, the currents at the anodes of the two vacuum tubes are phase
+inverted as well. Note that the current signal is somehow flattened
+in the lower parts of the plot. This is because on the right side
+of the loadline of Figure 14 there is less current variation, in
+correspondence of the same grid voltage variation, with respect to
+the left side of the loadline. This asymmetric behaviour introduces
+even order (mainly second order) harmonic distortions. However,
+given that these signals are phase inverted, signal flattening
+occurs in one vacuum tube at time. When one vacuum tube is
+operating in a more dense area, the other is operating in a less
+dense area. When one vacuum tube flattens the signal, the other
+vacuum tube does not. The two phase inverted signals are combined
+in the output transformer and even order harmonics, generated by
+the power vacuum tubes, are significantly attenuated, or cancelled
+at the output transformer, as can be seen in the lower plot of the
+figure. Note, however, that harmonic distortions introduced by
+previous stages or third order harmonics, introduced by symmetric
+nonlinearity, are amplified and not attenuated. Harmonic
+distortions produced by stages preceding the push-pull stage can be
+attenuated using global negative feedback, as discussed later in
+Section 5.2.</p>
+<p class="c1"><img width="643" height="362" id="Immagine 14" src=
+"book_file/image027.png"></p>
+<p><a name="_Ref443824813">Figure</a> 18: The upper plot shows the
+anode current of two vacuum tubes configured as push-pull when they
+amplify a signal. Note that when the amplified signal produced by
+one vacuum tube flattens in the lower part, due to the introduction
+of even order harmonics, the other vacuum tube compensates. The
+result is that the signal coming out from the output transformer,
+shown in the lower plot, is again an almost perfect sinusoidal
+signal.</p>
+<p>The push-pull configuration also offers the possibility of
+increasing the headroom, which is the operating range along the
+loadline. Larger headroom implies higher output power. When the
+amplitude of the input signal is too large, either the vacuum tube
+clips or it cuts-off (see Section 2.5). In a Single ended
+configuration, this is something that is avoided by setting the
+bias so that it works in Class A condition (see Section 2.6) and
+taking care that the input signal is not too large, limiting
+therefore the amplifier headroom. However, in a push-pull amplifier
+we can set the bias so that vacuum tubes operate in class AB,
+without problems. In class AB, one vacuum tube amplify most of the
+signal and cuts-off when the input signal is below a certain
+threshold. Cut-off happens when the signal reaches the point where
+the loadline intersects the horizontal axis. When operating in
+class AB, given that the two vacuum tubes amplify phase inverted
+signals, if one vacuum tube cuts-off, the other vacuum tube still
+amplify the inverted signal. This is depicted in the upper plot of
+Figure 19. The output transformer combine the two signals and an
+almost perfect signal is sent to the speaker, as shown in the lower
+plot of Figure 19. Operating in class AB allow setting the bias so
+that the vacuum tubes can cut-off in correspondence of large
+signals, increasing the exploited headroom.</p>
+<p class="c1"><img width="643" height="362" id="Immagine 15" src=
+"book_file/image028.png"></p>
+<p><a name="_Ref443827710">Figure</a> 19: When operating in class
+AB, one vacuum tube amplifies just part of the whole signal, as
+shown in the upper plot. However, when one vacuum tube cuts-off the
+other still amplifies the signal, and vice versa. When the two
+signals are combined, in the output transformer, the original input
+signal is restored as shown in the lower plot.</p>
+<h3><a name="_Toc448603849"></a><a name="_Ref443758743">4.2.2   
+Loadline selection</a> and operating point</h3>
+<p>In a push pull output transformer, the impedance rating is
+referred to the whole impedance seen from one end to the other end
+of the primary. However, the transformer is simultaneously used by
+two vacuum tubes that see half the impedance rating of the
+transformer. Therefore, when using a push pull transformer with an
+impedance of 7.6K ohm, each anode sees an impedance of 3.8K ohm.
+When drawing the loadline for the power vacuum tubes of a push-pull
+amplifiers, half the transformer impedance is the value that must
+be used as a reference.</p>
+<p>The method for drawing the loadline, along with the relationship
+between the actual transformer impedance and the speaker impedance,
+has already been discussed in Section 3.1.1. However, at a closer
+look, in case of a push-pull power stage, we have an additional
+consideration to make. We just said that the impedance seen by each
+anode is half that of the end-to-end impedance of the transformer
+primary. This is true only when both vacuum tubes are operating
+simultaneously, for instance, when both vacuum tubes operate in
+class A. In a push-pull power stage, class AB operation is
+generally used. In a class AB amplifier, as discussed in Sections
+2.6 and 3.2.1, one vacuum tube might stop conducting while the
+other is fully active, and vice versa. When one of the two vacuum
+tubes does not conduce, just half transformer is used. In this
+case, the impedance seen by the anode is not half than that of the
+entire transformer. In fact, we already said that the impedance of
+the transformer goes with the square of the ratio between the
+number of turns, of the primary and the secondary of the
+transformer. If we use half transformer, we use half turns of the
+transformer primary and the impedance seen at the anode is one
+fourth of the entire transformer impedance. This can be verified
+using the equations discussed in Section 3.1.1.</p>
+<p>Figure 20 clarifies these aspects. When the two vacuum tubes
+amplify each, a signal inverted with respect to the other, their
+operating points moves in opposite directions along the loadline,
+starting from the quiescent operating point. The green and the
+yellow arrow represent the simultaneous position of the two vacuum
+tubes along the loadline. Suppose the signal amplified by the
+yellow vacuum tube, is such that it reaches the bottom of the graph
+and quits conducting. The green vacuum tube, at this point, sees a
+different impedance at its anode and the loadline slope changes
+accordingly. From this point on, the green arrow follows the solid
+red line, rather than the dashed line, corresponding to the
+continuation of the previous loadline. When the signal being
+amplified is such that the yellow vacuum tube starts conducting
+again, the green arrow will be back at the position where the
+impedance first changed, to see the original impedance again, and
+to continue along the solid red line. Note, of course, that the
+impedance change is not abrupt as depicted in the picture. The
+impedance change smoothly, while the yellow vacuum tube is in the
+process of quitting conduction.</p>
+<p class="c1"><img width="531" height="297" id="Immagine 17" src=
+"book_file/image029.png"></p>
+<p><a name="_Ref444358287">Figure</a> 20: In a push-pull
+transformer, operating in class AB, the loadline is not a straight
+line. While both vacuum tubes are conducting, the impedance seen at
+the anode is half than that of the entire transformer. When one of
+the two vacuum tubes quit conducting, just half transformer is
+used, and given that the impedance goes with the square of the turn
+ratio, the impedance will be one fourth of the entire transformer
+impedance. In the picture, when the yellow arrow, representing one
+power vacuum tube, reaches the bottom, the green arrow,
+representing the other vacuum tube, continues following the red
+line, rather than the dashed line.</p>
+</div>

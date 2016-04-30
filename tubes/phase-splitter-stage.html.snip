@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<h2>Phase splitter stage</h2>
-<p>
-This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text 
-</p>
-<p>
-This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text 
-</p>
-<p>
-This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text This is the phase splitter stage placeholder text 
-</p>
+<div class="WordSection1">
+<h1><a name="_Toc448603850"></a><a name="_Ref443500861">5:    
+Phase splitter stage</a></h1>
+<h2><a name="_Toc448603851"></a><a name="_Ref448564325">5.1   
+Concertina</a></h2>
+<p>The basic schema of a <i>concertina</i>, or <i>cathodyne</i>,
+phase splitter is given in Figure 21. Two resistors of exactly the
+same resistance R<sub>k</sub>=R<sub>a</sub> are connected
+respectively from the high tension source V+ and the anode, and
+from the cathode to the ground. In this way, the two resistors,
+along with the vacuum tube internal resistance, form a voltage
+divider. When grid voltage increases, the vacuum tube resistance
+decreases. When the vacuum tube resistance decreases the voltage at
+the anode decrease, and the voltage at the cathode increases of
+exactly the same amount. Similarly, when the grid voltage decrease,
+we see the anode voltage increasing and the cathode voltage
+decreasing of exactly the same amount. If the two resistors are
+perfectly matched, two phase inverted signals of exactly the same
+amplitude can be taken at the anode and at the cathode of the
+vacuum tube. These two signals can be fed to the push-pull vacuum
+tubes of the next stage.</p>
+<p class="c1"><img width="386" height="405" id="Immagine 24" src=
+"book_file/image030.png"></p>
+<p><a name="_Ref445540967">Figure</a> 21: The concertina phase
+splitter uses two resistors of the same resistance
+R<sub>ck</sub>=R<sub>a</sub> connected to the anode and to the
+cathode of a vacuum tube. Voltage variations of at the anode and at
+the cathode of the vacuum tube, due to a signal applied to the
+grid, are of the same amplitude and with inverted phases. A voltage
+divider, built with appropriate values of R<sub>1</sub> and
+R<sub>2</sub>, is used to provide the gird with the correct bias
+voltage. The coupling capacitor C<sub>c</sub> is used to isolate
+the previous stage from the bias voltage applied to the grid.</p>
+<p>Bias voltage to the vacuum tube grid is obtained using a voltage
+divider composed of the resistors R<sub>1</sub> and R<sub>2</sub>.
+The voltage applied to the grid should be, as usual, negative with
+respect to the cathode voltage. In this configuration, the cathode
+voltage is higher than ground due to the effect of the cathode
+resistor R<sub>k</sub>. Let I<sub>b</sub>, be the bias current. The
+quiescent cathode voltage is
+V<sub>c</sub>=R<sub>k</sub>&#215;I<sub>b</sub>. For instance,
+suppose we want a bias current I<sub>b</sub> of 1 mA and that the
+cathode resistance R<sub>k</sub> is 100k ohm. The cathode voltage
+is V<sub>k</sub>=100k ohm &#215; 1 ma= 100 Volts.</p>
+<p>Suppose we want the operating point to be in correspondence of
+the red spot in Figure 22. The bias voltage applied to the grid
+should be approximatively 1.25 Volts below the cathode voltage,
+that is 98.75 Volts from ground. To compute the correct values for
+R1 and R2 we can use the voltage divider equations:</p>
+<p class="c1"><img width="200" height="45" src=
+"book_file/image031.png"></p>
+<p>Suppose high tension V+ is 380 Volts, the ratio between the two
+resistors must be (380/98,75)-1&#8776; 2,85. For example,
+R<sub>1</sub>=1,2M ohm and R<sub>2</sub>=560k ohm are realistic
+values that give a ration very close to the needed one.</p>
+<p>The grid stopper resistor <i>R<sub>g</sub></i> has the purpose
+of blocking very high frequencies and parasitic oscillations, by
+creating a low pass filter together with the internal vacuum tube
+capacitance, as already discussed in Section 3.1. The grid stopper
+resistor must be soldered directly on the pin of the vacuum tube
+socket. Values around 47k ohm are generally used for vacuum tubes
+like the 12AX7. The coupling capacitor <i>C<sub>c</sub></i>,
+isolates previous stage from the bias voltage given to the grid
+<a>The coupling capacitor and <i>R<sub>2</sub></i> form a high pass
+filter. <i>C<sub>c</sub></i> has to be chosen according to the low
+frequency cut-off. For instance. If R<sub>2</sub> is 560K ohm and
+we want a frequency cut-off at 7 Hz, we have:</a></p>
+<p><img width="359" height="24" src=
+"book_file/image032.png"><a class="msocomanchor" id="_anchor_4"
+onmouseover="msoCommentShow('_anchor_4','_com_4')" onmouseout=
+"msoCommentHide('_com_4')" href="#_msocom_4" language="JavaScript"
+name="_msoanchor_4">[GA4]</a> </p>
+<p>The cathode resistor <i>R<sub>k</sub></i> puts the vacuum tube
+under heavy local negative feedback. As explained in Section 2.7.2
+the cathode resistor tend to vary the cathode voltage in the same
+direction than the grid voltage variation, thus opposing the grid
+to cathode voltage variation. The cathode resistor value, generally
+used in a concertina phase splitter, offers a heavy negative
+feedback, which significantly reduces the gain of the vacuum tube.
+For instance, in a concertina, built using a 12AX7 vacuum tube, the
+gain is around 0.99, at each output. In practice, in this case, we
+can imagine that the concertina simply takes the input signal and
+produces two outputs signals (one inverted with respect to the
+other) practically of the same amplitude of the input signal.</p>
+<p>The values of the anode and cathode resistors determine the load
+seen by the vacuum tube, and consequently the loadline. The total
+load seen by the vacuum tube is the
+<i>R<sub>a</sub></i>+<i>R<sub>k</sub></i>. However, when a signal
+is applied to the grid, the two output signals also traverse the
+coupling capacitors <i>C<sub>cp</sub></i>, between the concertina
+and the power stage, and go to the two grid leak resistors
+<i>R<sub>l</sub></i>. The two grid leak resistors are respectively
+in parallel to the anode and cathode resistors of the concertina.
+The total load, in this case, is the sum of the resistances
+resulting from the parallel effect of cathode resistor and one grid
+leak, on one side, and the anode resistor and the other grid leak,
+on the other side. In a few words, we have two different loadlines.
+One loadline, which we call the <i>static loadline</i>, has to be
+considered when the vacuum tube is in a quiescent state, to analyse
+and decide the load and the grid bias needed for an optimal
+quiescent operating point. The other loadline, which we call the
+<i>dynamic loadline</i>, has to be taken into account to analyse
+what happens when a signal goes through the vacuum tube and
+traverse the coupling capacitors.</p>
+<p>Suppose <i>R<sub>a</sub></i>=<i>R<sub>k</sub></i>=100k ohm, the
+two grid leaks are <i>R<sub>l</sub></i>=180k ohm, and the high
+tension is V+=380 Volts. On one hand, the total static load is 200k
+ohm and produces the loadline depicted by the red line in Figure
+22. On the other hand, the dynamic load seen, respectively at the
+anode and at the cathode, is the result of 100k ohm in parallel
+with 180k ohm, which is approximately 64k ohm. The total dynamic
+load in this case is 128k ohm, which gives the green dynamic
+loadline in Figure 22. Note that, since the signal oscillates
+around the quiescent operating point, the dynamic loadline
+intersects the static loadline exactly at this point, identified by
+the red spot in the figure.</p>
+<p class="c1"><img width="501" height="319" id="Immagine 18" src=
+"book_file/image033.png"></p>
+<p><a name="_Ref445544282">Figure</a> 22: The concertina phase
+splitter has two loadlines. The static loadline has to be
+considered when the vacuum tube is in a quiescent state. In this
+case, just the anode and cathode resistors contribute to the
+overall load seen by the vacuum tube. When a signal is applied to
+the grid, the signals at the anode and cathode of the vacuum tube
+go through the coupling capacitors C<sub>cp</sub> and from these to
+the grid leak resistors of the power stage, which are now parallel
+to the anode and cathode resistors. The total load seen by the
+vacuum tube is reduced and the dynamic loadline has to be
+considered in this case.</p>
+<p> </p>
+<h2><a name="_Toc448603852">5.2    Long tailed pair</a></h2>
+<h2><a name="_Toc448603853">5.3    Pharaphrase</a></h2>
+</div>

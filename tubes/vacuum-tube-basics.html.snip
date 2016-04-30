@@ -1,27 +1,210 @@
 <!DOCTYPE html>
-<h2>Vacuum tube basics</h2>
-<p>
-Before we actually enter into to the details of designing a tube amplifier, we have to discuss some <a href="#" onclick="my_modal_open('introduction.html.snip')">basics</a> principles related to electronic vacuum tubes. If you already know how vacuum tubes operate, you can skip this chapter and move directly to the next one.
-</p>
-<h3>Hydraulic valves</h3>
-<p>
-The operating modality of a vacuum tube can be explained assimilating it to a hydraulic valve. Suppose a bucket, filled with water, is connected to a pipe, having a hydraulic valve to control the flow of water through it. Refer to Figure 1, to follow the example. If the position of the bucket is higher than the other end of the pipe, the potential energy of the water contained in the bucket is higher than that of the end of the pipe. This implies that the water naturally flows from the bucket at the top toward the bottom end of the pipe.
-</p>
-<p>
-However, if the valve is closed, as in Figure 1 a), the water flow is stopped. When the valve is fully open, as in Figure 1 b), the water flows freely. If the position of the valve is dynamically controlled with a signal, as sketched in Figure 1 c), the flow of water in the pipe follows the signal applied to the valve.
-</p>
-<h4>Operating point</h4>
-<p>
-Suppose now we want to apply a signal to the valve position so that the variation of the flow at the end of the pipe follows precisely the position of the valve. In order to obtain that, we have to choose an operating point for the valve. The operating point, in a few words, refers to the position of the valve when no signal is applied to it. Alternatively, we can consider the operating point as the amount of water that flows when no signal is applied to the valve. We can assume that the signal oscillates with positive and negative values around an idle point. Suppose the operating point is set so that the valve is fully closed when there is no signal. In this case, the flow cannot follow the negative part of the signal, when the signal goes below the idle point, since the valve is already fully close and no further reduction of the flow is possible. Similarly, if the valve is fully open at the idle point, it is not possible to follow the positive part of the signal, when the signal is above the idle point, since no further increase of the flow is possible. In general, when the operating point is too high, as shown in Figure 2 a) we might lose the highest parts of the signal. When the operating point is too low, as shown in Figure 2 b) we might lose the lowest parts of the signal. In Figure 2 c) the entire dynamic range of the signal is correctly followed.
-</p>
-<h3>Electronic vacuum tubes</h3>
-<p>
-The operating principle of a vacuum tube is basically similar to that of an hydraulic valve. In place of water flowing in pipes you have electrons travelling along copper wires or vacuum space. In place of potential energy given to the water by the effect of the gravity, you have electrical potential (or voltage) that force electrons to move through copper wires and vacuum space. Finally, an electronic valve can control the flow of electrons, analogously to what we described for hydraulic valves.
-In the following sections, we will introduce the basic types of electronic vacuum tubes and their operating principles.
-</p>
-<h4>Diode</h4>
-<p>
-</p>
-<h4>Triode</h4>
-<p>
-</p>
+<div class="WordSection1">
+<h1><a name="_Toc448603828">2:     Vacuum tube basics</a></h1>
+<p>Readers that already know, what vacuum tubes are and how they
+operate, can skip this chapter and move directly to the next one.
+For the non-initiated, before entering into to the details of
+designing a vacuum tube amplifier, we have to discuss some basics
+principles related to electronic vacuum tubes.</p>
+<h2><a name="_Toc448603829"></a><a name="_Ref429930633">2.1   
+Hydraulic valves</a></h2>
+<p>The operating modality of an electronic vacuum tube can be
+explained assimilating it to a <i>hydraulic valve</i>. Suppose a
+bucket, filled with water, is connected to a pipe that has a
+hydraulic valve to control the flow of water through it. Refer to
+Figure 1, to follow the example. If the position of the bucket is
+higher than the other end of the pipe, the potential energy of the
+water contained in the bucket is higher than that of the end of the
+pipe. This implies that the water naturally flows from the bucket
+toward the bottom end of the pipe, and we have <i>current</i> of
+water.</p>
+<p>However, if the valve is closed, as in Figure 1 a), the water
+flow stops. When the valve is fully open, as in Figure 1 b), the
+water flows freely. If the position of the valve is dynamically
+controlled with a signal, as sketched in Figure 1 c), the intensity
+water flow, through the pipe, follows the signal-controlled
+position of the valve.</p>
+<p class="c1"><img width="423" height="392" id="Immagine 26" src=
+"book_file/image003.png"></p>
+<p><a name="_Ref429916591">Figure</a> 1: A vacuum tube can be
+assimilated to a hydraulic valve. When the valve is closed (a), no
+water flows through the pipe. When the valve is open (b) water
+flows. When position of the valve is dynamically controlled with a
+signal, the water flow follows the signal.</p>
+<h3><a name="_Toc448603830"></a><a name="_Ref434057697">2.1.1   
+Operating point</a></h3>
+<p>Suppose we want to apply a signal to the valve position (the
+<i>input signal</i>) so that the variation of the flow at the end
+of the pipe (<i>output or amplified signal</i>) follows precisely
+the position of the valve. In order not to lose portions of the
+input signal, we have to choose an operating point for the valve.
+The <i>operating point</i>, in a few words, refers to the position
+of the valve when no signal is applied to it. Alternatively, we can
+consider the operating point as the amount of water that flows when
+no signal is applied to the valve. We can assume that the input
+signal oscillates producing positive and negative values. The input
+signal has the effect of shifting the valve in a more open or less
+open position, with respect to the operating point.</p>
+<p>Suppose the operating point is set so that the valve is fully
+closed, when there is no signal. In this case, the flow cannot
+follow the negative part of the signal. In fact, when the signal
+goes below the quiescent point, since the valve is already fully
+close, no further reduction of the flow is possible. Similarly, if
+the valve is fully open at the quiescent point, it is not possible
+to follow the positive part of the signal. When the signal is above
+the quiescent point no further increase of the flow is possible,
+since the valve is already fully open.</p>
+<p>In general, when the operating point is too high, as shown in
+Figure 2 a) we might lose the highest parts of the signal. When the
+operating point is too low, as shown in Figure 2 b) we might lose
+the lowest parts of the signal. In Figure 2 c) the entire dynamic
+range of the signal is correctly amplified.</p>
+<p class="c1"><img width="643" height="377" id="Immagine 29" src=
+"book_file/image004.png"></p>
+<p><a name="_Ref429921236">Figure</a> 2: Choosing the operating
+point of the valve. If the operating point is too high (a), signals
+that need to turn the valve in a position higher than the fully
+open positions, are lost. If the operating point is too low (b),
+signals that need to turn the valve in a position that is lower
+than the fully close position, are lost. If the operating point is
+correctly tuned, the full dynamic range of the signal can be
+correctly amplified.</p>
+<p>We will see that the choice of the operating point of an
+electronic vacuum tube determines the operating class of the
+amplifier (Class A, Class AB, or Class B). The operating point also
+affects power consumption, and response linearity of the amplifier
+itself.</p>
+<h2><a name="_Toc448603831">2.2    Electronic vacuum tubes</a></h2>
+<p>The operating principle of an <i>electronic vacuum</i>
+<i>tube</i> is basically similar to that of an hydraulic valve. In
+place of water flowing in pipes there are electrons travelling
+along copper wires or vacuum space. In place of potential energy,
+due to the effect of the gravity on the water, there is electrical
+potential (or voltage), which forces electrons to move through
+copper wires and vacuum space. Finally, an electronic valve can
+control the flow of electrons, analogously to what was described
+above for hydraulic valves.</p>
+<p>In the following sections, we will introduce the basic types of
+electronic vacuum tubes and their operating principles.</p>
+<h3><a name="_Toc448603832">2.2.1    Diode</a></h3>
+<p>The simplest type of electronic vacuum tube is the <i>diode</i>,
+depicted on the left of Figure 3. A diode has two terminals: a
+<i>cathode</i> and an <i>anode</i>. When the cathode is heated
+enough, electrons start to leave its surface, due to the thermionic
+effect. Since electrons have a negative charge, when a positive
+electrical potential (V+), higher than that of the cathode, is
+applied to the anode, the electrons emitted by the cathode move
+toward the anode itself.</p>
+<p>By convention, the direction of an electric current is that of
+the "positive" charges movement. In electric circuits, there is a
+current of electrons, having a negative charge, from the lower
+potential to the higher potential, which is equivalent to having a
+positive charge current in the opposite direction. Due to this
+convention, the direction of the electric current is said to go
+from the higher potential to the lower potential. In our case, we
+say that the electric current goes from the anode to the cathode,
+even if the electrons actually move in the opposite direction.</p>
+<h3><a name="_Toc448603833"></a><a name="_Ref430809739">2.2.2   
+Triode</a></h3>
+<p>What we have just described above is very similar to the example
+we made in Section 4 where the water flows from the bucket through
+the pipe under the effect of the gravity. Here the current flows
+from the high potential V+ applied to the anode toward the ground
+potential of the cathode. However, we still need a valve that
+allows us to control this flows.</p>
+<p>As depicted on the right of Figure 3, in a <i>triode</i>, a
+third terminal, called <i>grid</i>, is placed between the anode and
+the cathode. If the electrical potential of the grid is negative
+(lower) enough, with respect to the cathode, the electrons emitted
+by the cathode are repelled and pushed back, so they cannot reach
+the anode. In this way, the current is blocked, obtaining the same
+effect of closing the valve in the hydraulic circuit. On the other
+hand, if the grid potential is the same than that of the cathode,
+the current flows freely from the anode to the cathode, obtaining
+the same effect of opening the valve in the hydraulic circuit. With
+a triode, it is possible to control the amount of electrons
+reaching the anode, varying the electrical potential of its grid.
+When a voltage signal is applied to the grid, the electric current,
+from the anode to the cathode, follows the same signal.</p>
+<p>Note that the grid potential can also be positive with respect
+to the cathode. In this case, also the grid starts attracting the
+electrons emitted by the cathode, and a current flows from the grid
+to the cathode as well. This situation is very dangerous, since the
+vacuum tube can be damaged. However, this effect is sometime
+exploited in guitar amplifiers in order to explicitly produce
+distort sound. In this book, we will not take into consideration
+this possibility, since we are introducing high fidelity audio
+amplifiers, where distortion must be avoided.</p>
+<p class="c1"><img width="482" height="238" id="Immagine 2" src=
+"book_file/image005.png"></p>
+<p><a name="_Ref429930179">Figure</a> 3: Diode, on the left. Triode
+on the right. When the cathode of a vacuum tube is heated,
+electrons are emitted. If the anode ha an electrical potential
+higher than the cathode, the emitted electrons are attracted by it
+and an electric current start to flow (by convention the current
+goes from the positive to the negative end, even if actually the
+electrons, which have a negative charge, move from the negative to
+the positive end). In a triode, if the electrical potential of the
+grid, lying between the cathode and the anode, is negative enough
+with respect to the cathode, the electrons, emitted by the cathode,
+are repelled and do not reach the anode.</p>
+<h3><a name="_Toc448603834">2.2.3    Tetrode</a></h3>
+<p>The basic idea of the triode was refined with the introduction
+of the <i>tetrode</i>. A tetrode, as shown in Figure 4 on the left,
+has a fourth electrode called <i>screen</i>, between the anode and
+the grid. The screen has the purpose of reducing the capacitance
+formed by the grid and the anode. In fact, in a triode, the grid
+and the anode are very close one to the other and behave as a small
+capacitor. If the voltage of the screen is maintained higher than
+that of the cathode and the grid, but lower than the anode, during
+the operation of the vacuum tube, it acts as an electrostatic
+screen between the grid and the anode, thus reducing their inherent
+capacitance.</p>
+<h3><a name="_Toc448603835"></a><a name="_Ref439693074">2.2.4   
+Tetrode in ultra-linear configuration</a></h3>
+<p>In a tetrode, the screen is positive with respect to the
+cathode. Thus, it attracts a certain amount of the electrons
+emitted from the cathode itself, which would have gone to the
+anode. The result is a small current flowing through the screen.
+This effect is exploited to configure a vacuum tube to work in
+<i>distributed load</i>, or <i>ultra-linear</i> modality. This
+configuration is obtained by feeding back a percentage of the anode
+output signal to the screen, rather than applying a fixed voltage
+to it. The wanted percentage of anode output signal is typically
+provided to the screen by connecting it to a tap, coming out from
+the output transformer, as shown on the right side of Figure 4. The
+current through the screen, produces a sort of negative feedback
+and, with the appropriate percentage of anode signal, distortion
+falls at very small values, just slightly reducing power
+efficiency. The optimal percentage to be applied to the screen
+depends on the specific electronic vacuum tubes used. In many power
+amplifier designs, this percentage is generally set around 43%.</p>
+<p class="c1"><img width="495" height="284" src=
+"book_file/image006.png"></p>
+<p><a name="_Ref430121709">Figure</a> 4: In a tetrode, on the left,
+a fourth electrode is used as a screen to limit the inherent
+capacitance between grid and anode. The screen can also be set to
+operate in ultra-linear configuration, on the right, by providing
+it with a percentage of the anode output signal.</p>
+<h3><a name="_Toc448603836">2.2.5    Pentode</a></h3>
+<p>Tetrodes were further refined with the introduction of the
+<i>pentode</i>. When electrons emitted by the cathode reach the
+anode, they might have enough energy to stimulate secondary
+electron emission from the anode itself. Secondary emission
+electrons might reach the screen grid, causing instability and
+oscillations. In order to prevent secondary emission electrons from
+reaching the screen grid, a fifth electrode, called
+<i>suppressor</i> is added in a <i>pentode</i>, as shown in Figure
+5. The suppressor is generally directly connected to the cathode,
+either with an internal connection in the vacuum tube, or by an
+explicit connection between the pins, corresponding to the
+suppressor and the cathode, as depicted by the dashed line in
+Figure 5.</p>
+<p class="c1"><img width="216" height="277" id="Immagine 1" src=
+"book_file/image007.png"></p>
+<p><a name="_Ref430808322">Figure</a> 5: In a pentode, a fifth
+electrode, called suppressor is added to attract secondary emission
+electrons, emitted by the anode when hit by electrons arriving from
+the cathode. This prevents secondary emission electrons from
+reaching the screen grid, causing instability and oscillations.</p>
+</div>
