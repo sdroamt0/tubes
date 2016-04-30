@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Power supply</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lib/w3.css">
+<link rel="stylesheet" href="lib/tubes.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<script src="lib/jquery-1.12.0.min.js"></script>
+<script src="lib/tubes.js"></script>
+<!-- <script>
+/*
+window.addEventListener('message', function(event) {
+      if(event.origin === 'http://127.0.0.1')
+      {
+        //alert('Received message: ' + event.data.message);
+        document.location=event.data.message;
+      }
+      else
+      {
+        alert(event.origin)
+        alert('Origin not allowed!');
+      }
+
+    }, false);
+*/
+</script>
+-->
+
+<body class="w3-container w3-black">
+<div id="tubes-all"></div>
+<script>
+$('#tubes-all').load('main.html.snip');
+//w3_sidenav_open();
+</script>    
+</body>
+</html> 
